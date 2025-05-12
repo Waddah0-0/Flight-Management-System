@@ -1,69 +1,181 @@
 # Flight Management System
 
-A Java-based Flight Management System that allows users to manage flights, bookings, and user accounts. The system supports different user roles (Administrator, Agent, and Customer) with specific functionalities for each role.
+A comprehensive Java-based Flight Management System that provides a robust solution for managing airline operations. This system implements a role-based architecture supporting three distinct user types: Administrators, Agents, and Customers, each with specific functionalities tailored to their needs.
 
-## Features
+## 🚀 Features
 
-- User Management
-  - User registration and login
-  - Role-based access control (Admin, Agent, Customer)
-  - Profile management
+### User Management
+- **Multi-role System**
+  - Administrator: Full system control and user management
+  - Agent: Flight and booking management
+  - Customer: Flight search and booking capabilities
+- **Secure Authentication**
+  - Password validation with requirements:
+    - Minimum 8 characters
+    - At least one uppercase letter
+    - At least one lowercase letter
+    - At least one number
+    - At least one special character
+  - Email validation
+  - Session management
 
-- Flight Management
-  - Create and manage flights
-  - Search flights by origin, destination, and date
-  - View available seats and pricing
+### Flight Management
+- **Flight Operations**
+  - Create and manage flight schedules
+  - Set and modify flight details:
+    - Flight number
+    - Airline
+    - Origin/Destination
+    - Departure/Arrival times
+    - Seat availability
+  - Dynamic pricing for different seat classes
+- **Seat Management**
+  - Three seat classes:
+    - Economy
+    - Business
+    - First Class
+  - Real-time seat availability tracking
+  - Automatic seat release on cancellation
 
-- Booking Management
-  - Create and manage bookings
-  - Add multiple passengers
-  - Select seat classes (Economy, Business, First Class)
-  - Cancel bookings
+### Booking System
+- **Booking Features**
+  - Multi-passenger booking support
+  - Seat class selection
+  - Special requests handling
+  - Booking status tracking:
+    - Reserved
+    - Confirmed
+    - Cancelled
+- **Booking Management**
+  - View booking history
+  - Cancel bookings (with time restrictions)
+  - Modify booking details
+  - Calculate total prices
 
-- File-based Data Storage
-  - Persistent storage for users, flights, bookings, and passengers
-  - Automatic file initialization with example data
+### Data Management
+- **File-based Storage**
+  - Persistent data storage in text files
+  - Automatic file initialization
+  - Data integrity checks
+- **Data Files**
+  - users.txt: User profiles and credentials
+  - flights.txt: Flight schedules and details
+  - bookings.txt: Booking records
+  - passengers.txt: Passenger information
 
-## Setup Instructions
+## 🛠️ Technical Details
 
-1. Ensure you have Java installed on your system
-2. Clone this repository
-3. Compile the Java files:
+### System Architecture
+- **Object-Oriented Design**
+  - Inheritance hierarchy for user types
+  - Encapsulated data management
+  - Interface-based operations
+- **Data Flow**
+  - File-based persistence
+  - In-memory caching
+  - Real-time updates
+
+### Code Structure
+```
+src/
+├── Main.java                 # Application entry point
+├── FileManager.java          # File operations handler
+├── User.java                 # Base user class
+├── Customer.java            # Customer implementation
+├── Agent.java               # Agent implementation
+├── Administrator.java       # Administrator implementation
+├── Flight.java              # Flight management
+├── Booking.java             # Booking operations
+├── Passenger.java           # Passenger information
+├── UserRole.java            # User role enumeration
+├── SeatClass.java           # Seat class enumeration
+└── BookingStatus.java       # Booking status enumeration
+```
+
+## 📋 Prerequisites
+
+- Java Development Kit (JDK) 8 or higher
+- Basic understanding of Java programming
+- Command-line interface familiarity
+
+## 🚀 Installation
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Waddah0-0/Flight-Management-System.git
+   cd Flight-Management-System
    ```
+
+2. **Compile the Project**
+   ```bash
    javac src/*.java
    ```
-4. Run the application:
-   ```
+
+3. **Run the Application**
+   ```bash
    java -cp src Main
    ```
 
-## Default Users
+## 👥 Default Users
 
-The system comes with example users:
+### Administrator
+- Username: `admin`
+- Password: `Admin123!`
+- Capabilities: Full system control
 
-1. Administrator
-   - Username: admin
-   - Password: Admin123!
+### Agent
+- Username: `agent1`
+- Password: `Agent123!`
+- Capabilities: Flight and booking management
 
-2. Agent
-   - Username: agent1
-   - Password: Agent123!
+### Customer
+- Username: `customer1`
+- Password: `Customer123!`
+- Capabilities: Flight search and booking
 
-3. Customer
-   - Username: customer1
-   - Password: Customer123!
+## 🔒 Security Features
 
-## Project Structure
+- Password encryption
+- Input validation
+- Session management
+- Role-based access control
+- Secure file handling
 
-- `src/` - Contains all Java source files
-  - `Main.java` - Main application class
-  - `FileManager.java` - Handles file operations
-  - `User.java` - Base user class
-  - Other supporting classes
+## 📝 File Formats
 
-## Data Files
+### users.txt
+```
+username|password|name|email|contactInfo|address|role
+```
 
-- `users.txt` - Stores user information
-- `flights.txt` - Stores flight details
-- `bookings.txt` - Stores booking information
-- `passengers.txt` - Stores passenger details 
+### flights.txt
+```
+flightNumber|airline|origin|destination|departureTime|arrivalTime|economyPrice|businessPrice|firstClassPrice|economySeats|businessSeats|firstClassSeats
+```
+
+### bookings.txt
+```
+bookingId|customerUsername|flightNumber|status|seatClass|totalPrice|bookingTime
+```
+
+### passengers.txt
+```
+bookingId|firstName|lastName|passportNumber|nationality|dateOfBirth
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👨‍💻 Author
+
+Waddah0-0
+- GitHub: [@Waddah0-0](https://github.com/Waddah0-0) 
