@@ -1,0 +1,4 @@
+username|password|name|email|contactInfo|address|role
+admin|Admin123!|Admin User|admin@example.com|1234567890|Admin Office|ADMINISTRATOR
+agent1|Agent123!|John Agent|agent@example.com|9876543210|Agent Office|AGENT
+customer1|Customer123!|Jane Customer|customer@example.com|5555555555|123 Main St|CUSTOMER Janezzzz|Jane1234!|Janeatu|saumon6@gmail.com|01550177587||CUSTOMER

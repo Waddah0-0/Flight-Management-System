@@ -1,0 +1,2 @@
+bookingId|firstName|lastName|passportNumber|nationality|dateOfBirth
+BK001|Jane|Customer|P123456|USA|1990-01-01 

@@ -1,0 +1,2 @@
+bookingId|customerUsername|flightNumber|status|seatClass|totalPrice|bookingTime
+BK001|customer1|FL101|CONFIRMED|ECONOMY|500.00|2024-03-19 15:00 
